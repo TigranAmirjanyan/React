@@ -5,7 +5,7 @@ import './Header.css'
 const Header=()=>{
     return(
      <div className="Header">
-        <Link to='/'><img src={logo} className="Header-logo"/></Link>
+        <Link to='/'><img src={logo} alt='Hello' className="Header-logo"/></Link>
      </div>
     )
 }

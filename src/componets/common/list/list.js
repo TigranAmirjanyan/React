@@ -47,13 +47,7 @@ class List extends React.Component{
                this.setState({error:error.message, loading:false})
            })
      }
-     renderChangePercent(percent){
-         if(percent>0){
-             return(<span className='percent-raised'>{percent}% &uarr;</span>)
-         }
-         return(<span className='percent-fallen'>{percent}&darr;</span>)
-
-     }
+     
     render(){
         const {loading,error,currencies,page,totalPages}=this.state
         if(loading){
@@ -64,7 +58,7 @@ class List extends React.Component{
         }
         return(
         <div>
-            <Table currencies={currencies}  renderChangePercent={this.renderChangePercent}/>
+            <Table currencies={currencies}  />
             <Pagination handlePaginationClick=
                 {this.handlePaginationClick}
                 page={page}

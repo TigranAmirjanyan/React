@@ -10,13 +10,12 @@ const App=()=>{
     return(
       <BrowserRouter>
         <div>
-      <Header/>
-        <Switch>
-        <Route path='/' component={List} exact/>
-        <Route path='/currency/:id' component={Detail}/>
-        <Route component={NotFound}/>
-        
-        </Switch>
+          <Header/>
+          <Switch>
+            <Route path='/' component={List} exact/>
+            <Route path='/currency/:name' component={Detail}/>
+            <Route component={NotFound}/>
+          </Switch>
         </div>
       </BrowserRouter>
     )
