@@ -35,7 +35,7 @@ class List extends React.Component{
         .then(handleResponse)
            .then((data)=>{
                const {totalPages,currencies}=data
-               console.log(data)
+               
                this.setState({
                    currencies,
                    loading:false,
